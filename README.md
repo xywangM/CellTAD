@@ -35,7 +35,7 @@ Please follow the steps below:
 1. Install Python >= 3.9 (must match your torch/dgl version).
 2. Clone this repository and cd into it as below.
 ```
-git clone https://github.com/<your-org>/CellTAD.git
+git clone https://github.com/xyWangM/CellTAD.git
 cd CellTAD
 ```
 3. Create a new conda environment and install the packages in `requirements.txt` (check the torch/dgl versions against your CUDA version).
