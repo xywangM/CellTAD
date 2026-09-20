@@ -107,10 +107,9 @@ pip install hic-straw
 
 #### Demo
 
-```
-conda activate CellTAD
-python CellTAD.py --demo --run-identification --run-visualization
-```
+Two demo datasets (scMicro-C and Dip-C) with Steps 0-7 of the augmentation pipeline already computed are provided for a quick end-to-end run. The data are hosted on Zenodo: https://doi.org/10.5281/zenodo.22859087
+
+Download and unpack the data into `data/`, then see [demo_README.md](data/demo_README.md) for the download commands, run commands, directory layout, file contents and sanity checks.
 
 #### Example: scMicro-C (contact pairs, hg38)
 
