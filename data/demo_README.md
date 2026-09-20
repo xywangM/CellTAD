@@ -13,7 +13,6 @@ below. All paths in this document are given **relative to the repo root**
 (`CellTAD/`).
 
 Verified contents (inspected with `cooler`/`numpy` before packaging):
-
 | Stage in `augmentation_loader.py` | File | Contents |
 |---|---|---|
 | 0. Raw input | `data/demo/GM-800U_006/demo/chr1/raw/GM-800U_006_allValidPairs.txt` | Raw valid-pairs file (pairs format v1.0) for the anchor cell, upper-triangle, sorted chr1–chr2–pos1–pos2 |
