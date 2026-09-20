@@ -2,7 +2,7 @@
 
 ----------
 
-### Latest updates: September 20, 2026, version 0.0.3
+### Latest updates: September 20, 2026, version 0.0.1
 ## Contents:
 1. [Overview](#1-overview)
 2. [Installation](#2-installation)
@@ -19,16 +19,6 @@ CellTAD identifies topologically associating domains (TADs) in individual cells 
 - **Module 1, augmentation (`augmentation/`).** Single-cell maps are aggregated into a pseudo-bulk map, TADs are called on it with TADGATE, and cells are embedded with scHiCluster. For every TAD, the most similar cells among the k nearest neighbors are candidates; each augmented map of the anchor cell is built by adding Gaussian noise and replacing every TAD block with the block of a randomly drawn candidate.
 - **Module 2, embedding learning (`model/`, `train/`).** A graph convolutional encoder is trained on the anchor cell and its augmented views with an NCLA contrastive loss and a GIC (Graph Information Clustering) regularization term, giving per-bin embeddings.
 - **Module 3, TAD identification (`identification/`, `visualization/`).** TAD boundaries are identified directly from the embedding with a density-peak-style decision graph (rho insulation score, gamma = rho * delta) and visualized.
-
-Several advantages include:
-
-(1). CellTAD calls TADs on the single-cell map itself, so cell-to-cell differences in domain structure are kept instead of being averaged away by pseudo-bulk TAD callers.
-
-(2). Every extension of the paper's boundary rule (edge-bin margin, minimum candidate pool, small-segment merge) is an explicit, switchable parameter of `detect_tads_paper()`.
-
-(3). Every run writes TAD tables (CSV) and four external quality metrics (Hi-C contact ratio, adjacent-bin similarity, DBSCAN noise bins, boundary-margin ambiguity), so parameters can be judged by numbers rather than by the UMAP plot.
-
-(4). Contact pairs and `.hic` input are supported, for human (hg38) and mouse (mm10).
 
 ## 2. Installation
 Please follow the steps below:
