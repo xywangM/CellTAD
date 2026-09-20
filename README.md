@@ -57,7 +57,7 @@ pip install hic-straw
 - scMicro-C dataset (human GM12878, hg38): [Wu, 2025](https://doi.org/10.1038/s41588-025-02247-6)
   [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE279583](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE279583)
   (cells are named `GM-*U_*`; the demo anchor `GM-800U_006` comes from the 800U group)
-- Dip-C dataset (mouse cortex/hippocampus, mm10, the same data as CellLoop): [Tan, 2021](https://www.cell.com/cell/fulltext/S0092-8674(20)31754-2)
+- Dip-C dataset (mouse cortex/hippocampus, mm10): [Tan, 2021](https://www.cell.com/cell/fulltext/S0092-8674(20)31754-2)
   [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162511](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162511)
 
 ### Required input files
