@@ -89,7 +89,7 @@ pip install hic-straw
 |---|---|---|
 | `--demo` | Run a demo bundled in `data/demo/`, chosen by `--anchor-cell` | Default `GM-800U_006` (scMicro-C); `GSM4382149_cortex-p001-cb_001` selects the Dip-C demo (mm10) |
 | `--run-augmentation` | Run the augmentation pipeline (Steps 0-7) before training | |
-| `--augmentation-anchor-only` | Steps 6-7 only for `--anchor-cell` | Needs `--run-augmentation`; about 0.6 GB instead of about 113 GB for 185 cells |
+| `--augmentation-anchor-only` | Steps 6-7 only for `--anchor-cell` | Needs `--run-augmentation`; about 0.6 GB  |
 | `--augmentation-start-from` / `--augmentation-only` | Start from / run only one step (0 = `.hic` to pairs) | |
 | `--augmentation-force` | Ignore existing outputs and caches | |
 | `--run-identification` / `--run-visualization` | Identify and visualize TADs after training | Same implementation |
@@ -166,7 +166,7 @@ CellTAD runs the following steps:
 
 Augmentation (`<base_dir>/`): `GSE279583_extracted/`, `cell_id_map.tsv`, `tadgate_results/`, `schicluster_cool/`, `embedding/800U/`, `similar/`, `enhanced_maps/cell_XXX/chr1/`.
 
-Training (`<output-dir>/`, `<pre>` = `<anchor_cell>_<chrom>`): `<pre>_embedding.npy`, `<pre>_embedding_znorm.npy`, `<pre>_insulation_scores.npy`, `<pre>_view<i>_embedding.npy`, `<pre>_losses_v62.json`, `<pre>_model_v62.pth`.
+Training (`<output-dir>/`, `<pre>` = `<anchor_cell>_<chrom>`): `<pre>_embedding.npy`, `<pre>_embedding_znorm.npy`, `<pre>_insulation_scores.npy`, `<pre>_view<i>_embedding.npy`, `<pre>_losses.json`, `<pre>_model.pth`.
 
 Identification and visualization (`<output-dir>/visualization/tad/`, `<ts>` = start time of the run):
 ```
