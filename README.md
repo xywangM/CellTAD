@@ -133,7 +133,7 @@ python CellTAD.py \
     --run-augmentation --augmentation-anchor-only \
     --run-identification --run-visualization
 ```
-The augmentation is long (Step 2 about 18 minutes on CPU, Step 3 processes every cell), so run it in `tmux` / `nohup`. Finished steps are skipped when the command is rerun. `CellTAD.log` holds only the messages of `CellTAD.py` itself; append `2>&1 | tee run_console.log` to keep the output of every step.
+The augmentation is a little long, so run it in `tmux` / `nohup`. Finished steps are skipped when the command is rerun. `CellTAD.log` holds only the messages of `CellTAD.py` itself; append `2>&1 | tee run_console.log` to keep the output of every step.
 
 CellTAD runs the following steps:
 
@@ -182,13 +182,7 @@ external_metrics_<chrom>_<ts>.csv                external metrics, one row per r
 
 ## 4. Update Log
 
-- v0.0.3:
-    - New: `.hic` input (Step 0, `--hic-dir`), genome selection (`--chrom-sizes`, hg38 / mm10), anchor-only Steps 6-7 (`--augmentation-anchor-only`, float32 maps), TADGATE embedding cache and an Mclust wrapper for `mclust >= 6.1` under rpy2, `--visualization-outdir`, a Dip-C demo selected by `--anchor-cell`.
-    - Fixes: `detect_tads_paper()` raised a `NameError`; `visualization/tad.py::main()` now takes the arguments `CellTAD.py` passes, writes the TAD tables and metrics to disk and skips regions outside the chromosome; `--device auto` is resolved inside training; Step 3 follows `--chrom`; the `enhanced_maps/cell_XXX` name is zero-padded; `logger.py` writes UTF-8.
-    - Changes: `n_aug_views` now defaults to `0` (was `10`), so training uses the augmented maps of Step 7; the visualization output follows `--output-dir`; conflicting or invalid options stop with a clear error.
-    - Code cleanup: comments and docstrings in English; no change to any formula, model architecture or loss.
-- v0.0.2: `logger.py` robustness fixes; README rewritten in CellLoop style.
-- v0.0.1: first reorganization into a CellLoop-style package layout (`augmentation/ model/ train/ identification/ visualization/`); no change to any formula, model or loss.
+- v0.0.1: init
 
 ---
 
